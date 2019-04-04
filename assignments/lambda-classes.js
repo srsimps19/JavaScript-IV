@@ -54,9 +54,11 @@ class Student extends Person{
 
     graduate() {
         if(this.newGrade >= 70) {
-        return `${this.newName}, You Can Graduate!`
-        } 
-        
+            return `${this.newName}, You Can Graduate!`;
+        }
+        else {
+            return `${this.newName}, you are not ready to graduate.`;
+        }
     }
 }
 
@@ -137,7 +139,7 @@ const barney = new Instructor({
         "Java",
         "Python",
     ],
-    grade: 85
+    grade: 55
   });
 
   const cody = new ProjectManagers({
