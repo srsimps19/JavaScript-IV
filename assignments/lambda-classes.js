@@ -26,8 +26,9 @@ class Instructor extends Person{
     }
 
     grade(student, subject) {
-        return `${student.name} receives a perfect score on ${subject}`;
+        return `${student.newName} receives a perfect score on ${subject}`;
     }
+
 }
 
 class Student extends Person{
@@ -36,6 +37,7 @@ class Student extends Person{
         this.newPreviousBackground = personAttr.previousBackground;
         this.newClassName = personAttr.className;
         this.newFavSubjects = personAttr.favSubjects;
+        this.newGrade = personAttr.grade;
     }
 
     listsSubjects() {
@@ -49,6 +51,7 @@ class Student extends Person{
     sprintChallenge(subject) {
         return `${this.newName} has begun sprint challenge on ${subject}`;
     }
+    
 }
 
 class ProjectManagers extends Instructor{
@@ -112,7 +115,8 @@ const barney = new Instructor({
     favSubjects: [
         "HTML",
         "CSS",
-    ]
+    ],
+    grade: 99
   });
 
   const marshel = new Student({
@@ -125,7 +129,8 @@ const barney = new Instructor({
     favSubjects: [
         "Java",
         "Python",
-    ]
+    ],
+    grade: 85
   });
 
   const cody = new ProjectManagers({
