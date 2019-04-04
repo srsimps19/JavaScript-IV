@@ -51,8 +51,15 @@ class Student extends Person{
     sprintChallenge(subject) {
         return `${this.newName} has begun sprint challenge on ${subject}`;
     }
-    
+
+    graduate() {
+        if(this.newGrade >= 70) {
+        return `${this.newName}, You Can Graduate!`
+        } 
+        
+    }
 }
+
 
 class ProjectManagers extends Instructor{
     constructor(instructAttr) {
@@ -172,9 +179,12 @@ const barney = new Instructor({
   console.log(lilly.newClassName);
   console.log(lilly.listsSubjects());
   console.log(lilly.PRAssignment("Advanced CSS"));
+  console.log(lilly.graduate());
 
   console.log(marshel.newFavSubjects);
   console.log(marshel.sprintChallenge("HTML"));
+  console.log(marshel.newGrade);
+  console.log(marshel.graduate());
 
   console.log(cody.newGradClassName);
   console.log(cody.standUp("Web200_Cody"));
